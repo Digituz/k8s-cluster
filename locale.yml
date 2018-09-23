@@ -1,0 +1,12 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: set locale
+      lineinfile:
+        dest: /etc/environment
+        line: 'LC_ALL=en_US.UTF-8'
+
+    - name: set lang
+      lineinfile:
+        dest: /etc/environment
+        line: 'LANG=en_US.UTF-8'
